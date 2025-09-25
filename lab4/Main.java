@@ -21,6 +21,8 @@ public class Main {
     System.out.print("Enter height of rectangular cuboid: ");
     double H = scanner.nextDouble();
 
+    scanner.close();
+
     Cube cube = new Cube(A);
     RectangularCuboid cuboid = new RectangularCuboid(D, C, H);
 
