@@ -48,12 +48,10 @@ class RectangularCuboid implements Solid {
     this.H = height;
   }
 
-  @Override
   public double getVolume() {
     return (D * C * H);
   }
 
-  @Override
   public double getSurfaceArea() {
     return (2 * (D * C + D * H + C * H));
   }
@@ -64,12 +62,10 @@ class Cube implements Solid {
 
   public Cube(double length) { this.A = length; }
 
-  @Override
   public double getVolume() {
     return Math.pow(A, 3);
   }
 
-  @Override
   public double getSurfaceArea() {
     return (6 * Math.pow(A, 2));
   }
