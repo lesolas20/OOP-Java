@@ -9,15 +9,17 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-class Window extends Frame implements WindowListener, KeyListener, MouseMotionListener {
+class Window extends Frame implements WindowListener, KeyListener, MouseListener, MouseMotionListener {
   Point lastPosition = null;
 
   public Window() {
     super();
     addWindowListener(this);
     addKeyListener(this);
+    addMouseListener(this);
     addMouseMotionListener(this);
   }
 
@@ -59,6 +61,10 @@ class Window extends Frame implements WindowListener, KeyListener, MouseMotionLi
   public void keyTyped(KeyEvent event) {}
 
   public void mouseEntered(MouseEvent event) {}
+
+  public void mousePressed(MouseEvent event) {}
+  public void mouseReleased(MouseEvent event) {}
+  public void mouseClicked(MouseEvent event) {}
   public void mouseDragged(MouseEvent event) {}
 }
 
